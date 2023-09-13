@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <script>
+        function numofSems(){
+            resetState();
+            let semNum=parseInt(document.getElementById("totalsems").value);
+            for(let i=1; i <= semNum;i++){
+                var div=document.getElementById(`s${i}`);
+                div.style.display="block";
+            }
+            document.getElementById("calbut").style.display = "block";  
+            document.getElementById("calbut").style.alignItems = "center";  
+        }
+        function resetState(){
+            for (let i = 1; i <= 8; i++) {
+                var div = document.getElementById(`s${i}`);
+                div.style.display = "none";
+            }
+        }
+
+        function calcCGPA() {
+            var cumgp=0.00;
+            let semNum = parseInt(document.getElementById("totalsems").value);
+            for (let i = 1; i <= semNum; i++) {
+                var gpaForOne = parseFloat(document.getElementById(`subs${i}`).value);
+                cumgp+=gpaForOne;
+            }
+            var finalCgpa=cumgp/semNum;
+            document.getElementById("meanResult").textContent = finalCgpa.toFixed(2);
+        }
+    </script>
+</head>
+<body align="center">
+    <h1>Cummulative Grade Point Average Calculator</h1>
+    <form>
+        <label for="totalsems">Calculate CGPA till: </label>
+        <select id="totalsems" required>
+            <option value="1">1st Semester</option>
+            <option value="2">2nd Semester</option>
+            <option value="3">3rd Semester</option>
+            <option value="4">4th Semester</option>
+            <option value="5">5th Semester</option>
+            <option value="6">6th Semester</option>
+            <option value="7">7th Semester</option>
+            <option value="8">8th Semester</option>
+        </select><br>
+        <div id="nexbut"><button type="button" onclick="numofSems()">Next</button></div>
+        <br>
+        <div id="s1" style="display: none;">
+            <label>Semester 1 GPA:</label>
+            <input id="subs1" type="text"><br>
+        </div>
+
+        <div id="s2" style="display: none;">
+            <label>Semester 2 GPA:</label>
+            <input id="subs2" type="text"><br>
+        </div>
+
+        <div id="s3" style="display: none;">
+            <label>Semester 3 GPA:</label>
+            <input id="subs3" type="text"><br>
+        </div>
+
+        <div id="s4" style="display: none;">
+            <label>Semester 4 GPA:</label>
+            <input id="subs4" type="text"><br>
+        </div>
+
+        <div id="s5" style="display: none;">
+            <label>Semester 5 GPA:</label>
+            <input id="subs5" type="text"><br>
+        </div>
+
+        <div id="s6" style="display: none;">
+            <label>Semester 6 GPA:</label>
+            <input id="subs6" type="text"><br>
+        </div>
+
+        <div id="s7" style="display: none;">
+            <label>Semester 7 GPA:</label>
+            <input id="subs7" type="text"><br>
+        </div>
+
+        <div id="s8" style="display: none;">
+            <label>Semester 8 GPA:</label>
+            <input id="subs8" type="text"><br>
+        </div>
+        <br>
+        <div id="calbut" style="display: none;"><button  type="button" onclick="calcCGPA()"> Calculate CGPA</button></div>
+        <div id="resCGPA"><p>Your CGPA is: <span id="meanResult">00.00</span></p></div>
+    </form>
+</body>
+</html>

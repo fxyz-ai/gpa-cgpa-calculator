@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester 3</title>
+</head>
+<body align="center">
+    <h1>Grade Point Average Calculator-Semester 3</h1>
+    <form>
+        <label for="sub1">MA3354-DM</label>
+        <select id="sub1" id="gradesel">
+            <option value="10.0">O</option>
+            <option value="9.0">A+</option>
+            <option value="8.0">A</option>
+            <option value="7.0">B+</option>
+            <option value="6.0">B</option>
+            <option value="5.0">C</option>
+            <option value="0.0">U</option>
+        </select>
+        <br>
+        <label for="sub2">CS3351-DPCO</label>
+        <select id="sub2" id="gradesel">
+            <option value="10.0">O</option>
+            <option value="9.0">A+</option>
+            <option value="8.0">A</option>
+            <option value="7.0">B+</option>
+            <option value="6.0">B</option>
+            <option value="5.0">C</option>
+            <option value="0.0">U</option>
+        </select>
+        <br>
+        <label for="sub3">CS3352-FDS</label>
+        <select id="sub3" id="gradesel">
+            <option value="10.0">O</option>
+            <option value="9.0">A+</option>
+            <option value="8.0">A</option>
+            <option value="7.0">B+</option>
+            <option value="6.0">B</option>
+            <option value="5.0">C</option>
+            <option value="0.0">U</option>
+        </select>
+        <br>
+        <label for="sub4">CS3301-DS</label>
+        <select id="sub4" id="gradesel">
+            <option value="10.0">O</option>
+            <option value="9.0">A+</option>
+            <option value="8.0">A</option>
+            <option value="7.0">B+</option>
+            <option value="6.0">B</option>
+            <option value="5.0">C</option>
+            <option value="0.0">U</option>
+        </select>
+        <br>
+        <label for="sub5">CS3391-OOP</label>
+        <select id="sub5" id="gradesel">
+            <option value="10.0">O</option>
+            <option value="9.0">A+</option>
+            <option value="8.0">A</option>
+            <option value="7.0">B+</option>
+            <option value="6.0">B</option>
+            <option value="5.0">C</option>
+            <option value="0.0">U</option>
+        </select>
+        <br>
+        <label for="sub6">CS3311-DS LAB</label>
+        <select id="sub6" id="gradesel">
+            <option value="10.0">O</option>
+            <option value="9.0">A+</option>
+            <option value="8.0">A</option>
+            <option value="7.0">B+</option>
+            <option value="6.0">B</option>
+            <option value="5.0">C</option>
+            <option value="0.0">U</option>
+        </select>
+        <br>
+        <label for="sub7">CS3381-OOP LAB</label>
+        <select id="sub7" id="gradesel">
+            <option value="10.0">O</option>
+            <option value="9.0">A+</option>
+            <option value="8.0">A</option>
+            <option value="7.0">B+</option>
+            <option value="6.0">B</option>
+            <option value="5.0">C</option>
+            <option value="0.0">U</option>
+        </select>
+        <br>
+        <label for="sub8">CS3361-DS LAB</label>
+        <select id="sub8" id="gradesel">
+            <option value="10.0">O</option>
+            <option value="9.0">A+</option>
+            <option value="8.0">A</option>
+            <option value="7.0">B+</option>
+            <option value="6.0">B</option>
+            <option value="5.0">C</option>
+            <option value="0.0">U</option>
+        </select>
+        <br>
+        <label for="sub9">GE3361-PD</label>
+        <select id="sub9" id="gradesel">
+            <option value="10.0">O</option>
+            <option value="9.0">A+</option>
+            <option value="8.0">A</option>
+            <option value="7.0">B+</option>
+            <option value="6.0">B</option>
+            <option value="5.0">C</option>
+            <option value="0.0">U</option>
+        </select>
+        <br><br>
+    
+        <button type="button" onclick="gradeCal()">Submit</button>
+    </form>
+    <div id="resh">
+        <p>GPA accumulated in Semester 3 is: <span id="totalGPA">0.00</span></p>
+    </div>
+    
+    <script>
+        function gradeCal() {
+                console.log("Created by mf");
+                let totalCredits = 0.0;
+                let totalGradePoints = 0.0;
+                let resultSpan = document.getElementById("totalGPA");
+
+                var cred = { sub1: 4, sub2: 4, sub3: 3, sub4: 3, sub5: 3, sub6: 1.5, sub7: 1.5, sub8: 2, sub9: 1}
+
+                for (let i = 1; i <= 9; i++) {
+                    const gradeDropdown = document.getElementById(`sub${i}`);
+                    const selectedGrade = gradeDropdown.value;
+                    if (selectedGrade != 0.0) {
+                        var credit = cred[`sub${i}`];
+                    }
+                    else {
+                        credit = 0;
+                    }
+                    if (!isNaN(selectedGrade) && !isNaN(credit)) {
+                        const gradePoints = selectedGrade * credit;
+                        totalCredits += credit;
+                        totalGradePoints += gradePoints;
+                    }
+                    else {
+                        resultSpan.textContent = "N/A";
+                    }
+                }
+                const totalGpa = (totalGradePoints / totalCredits).toFixed(2);
+                resultSpan.textContent = totalGpa;
+                alert(`Your GPA is: ${totalGpa}`);
+            }
+    </script>
+</body>
+</html>
