@@ -7,6 +7,7 @@
 </head>
 <body align="center">
     <h1>Grade Point Average Calculator-Semester 2</h1>
+    <h4><b>(Suppose if any of the Subjects is not for your regulation then , Please give the option (U) from the dropdown list)</b></h4>
     
     <form>
         <label for="sub1">HS3252-PE-II</label>
@@ -75,7 +76,7 @@
             <option value="0.0">U</option>
         </select>
         <br>
-        <label for="sub7">GE3271-EP LAB</label>
+        <label for="sub7">GE3252-TT</label>
         <select id="sub7" id="gradesel">
             <option value="10.0">O</option>
             <option value="9.0">A+</option>
@@ -86,7 +87,7 @@
             <option value="0.0">U</option>
         </select>
         <br>
-        <label for="sub8">CS3271-PC LAB</label>
+        <label for="sub8">GE3271-EP LAB</label>
         <select id="sub8" id="gradesel">
             <option value="10.0">O</option>
             <option value="9.0">A+</option>
@@ -97,8 +98,19 @@
             <option value="0.0">U</option>
         </select>
         <br>
-        <label for="sub9">GE3272-FL LAB</label>
+        <label for="sub9">CS3271-PC LAB</label>
         <select id="sub9" id="gradesel">
+            <option value="10.0">O</option>
+            <option value="9.0">A+</option>
+            <option value="8.0">A</option>
+            <option value="7.0">B+</option>
+            <option value="6.0">B</option>
+            <option value="5.0">C</option>
+            <option value="0.0">U</option>
+        </select>
+        <br>
+        <label for="sub10">GE3272-FL LAB</label>
+        <select id="sub10" id="gradesel">
             <option value="10.0">O</option>
             <option value="9.0">A+</option>
             <option value="8.0">A</option>
@@ -119,9 +131,9 @@
                 let totalGradePoints = 0.0;
                 let resultSpan = document.getElementById("totalGPA");
 
-                var cred = { sub1: 2, sub2: 4, sub3: 3, sub4: 3, sub5: 4, sub6: 3, sub7: 2, sub8: 2,sub9:2 }
+                var cred = { sub1: 2, sub2: 4, sub3: 3, sub4: 3, sub5: 4, sub6: 3, sub7: 1, sub8: 2,sub9:2,sub10:2 }
 
-                for (let i = 1; i <= 8; i++) {
+                for (let i = 1; i <= 10; i++) {
                     const gradeDropdown = document.getElementById(`sub${i}`);
                     const selectedGrade = gradeDropdown.value;
                     if (selectedGrade != 0.0) {
