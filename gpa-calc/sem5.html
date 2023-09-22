@@ -4,82 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semester 5</title>
+    <style>
+        table {
+            margin: 0 auto;
+        }
+    
+        td {
+            border: 2px solid black;
+            padding: 8px;
+        }
+    
+        select {
+            border: 1px solid black;
+            padding: 2px;
+        }
+    
+        button {
+            padding: 3px 10px;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body align="center">
     <h1>Grade Point Average Calculator-Semester 5</h1>
     <form>
-        <label for="sub1">CS3591-CN</label>
-        <select id="sub1" id="gradesel">
-            <option value="10.0">O</option>
-            <option value="9.0">A+</option>
-            <option value="8.0">A</option>
-            <option value="7.0">B+</option>
-            <option value="6.0">B</option>
-            <option value="5.0">C</option>
-            <option value="0.0">U</option>
-        </select>
-        <br>
-        <label for="sub2">CS3501-CD</label>
-        <select id="sub2" id="gradesel">
-            <option value="10.0">O</option>
-            <option value="9.0">A+</option>
-            <option value="8.0">A</option>
-            <option value="7.0">B+</option>
-            <option value="6.0">B</option>
-            <option value="5.0">C</option>
-            <option value="0.0">U</option>
-        </select>
-        <br>
-        <label for="sub3">CB3491-CCS</label>
-        <select id="sub3" id="gradesel">
-            <option value="10.0">O</option>
-            <option value="9.0">A+</option>
-            <option value="8.0">A</option>
-            <option value="7.0">B+</option>
-            <option value="6.0">B</option>
-            <option value="5.0">C</option>
-            <option value="0.0">U</option>
-        </select>
-        <br>
-        <label for="sub4">CS3551-DC</label>
-        <select id="sub4" id="gradesel">
-            <option value="10.0">O</option>
-            <option value="9.0">A+</option>
-            <option value="8.0">A</option>
-            <option value="7.0">B+</option>
-            <option value="6.0">B</option>
-            <option value="5.0">C</option>
-            <option value="0.0">U</option>
-        </select>
-        <br>
-        <label for="sub5">EC:CCS375-WT</label>
-        <select id="sub5" id="gradesel">
-            <option value="10.0">O</option>
-            <option value="9.0">A+</option>
-            <option value="8.0">A</option>
-            <option value="7.0">B+</option>
-            <option value="6.0">B</option>
-            <option value="5.0">C</option>
-            <option value="0.0">U</option>
-        </select>
-        <br>
-        <label for="sub6">EC:CCS355-NNDL</label>
-        <select id="sub6" id="gradesel">
-            <option value="10.0">O</option>
-            <option value="9.0">A+</option>
-            <option value="8.0">A</option>
-            <option value="7.0">B+</option>
-            <option value="6.0">B</option>
-            <option value="5.0">C</option>
-            <option value="0.0">U</option>
-        </select>
-        <br><br>
+        <table>
+            <tr>
+                <td style="text-align: left;"><label for="sub1">CS3591-CN</label></td>
+                <td>
+                    <select id="sub1" id="gradesel">
+                        <option value="10.0">O</option>
+                        <option value="9.0">A+</option>
+                        <option value="8.0">A</option>
+                        <option value="7.0">B+</option>
+                        <option value="6.0">B</option>
+                        <option value="5.0">C</option>
+                        <option value="0.0">U</option>
+                    </select>
+                </td>
+            </tr>
         
-    
+            <tr>
+                <td style="text-align: left;"><label for="sub2">CS3501-CD</label></td>
+                <td>
+                    <select id="sub2" id="gradesel">
+                        <option value="10.0">O</option>
+                        <option value="9.0">A+</option>
+                        <option value="8.0">A</option>
+                        <option value="7.0">B+</option>
+                        <option value="6.0">B</option>
+                        <option value="5.0">C</option>
+                        <option value="0.0">U</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: left;"><label for="sub3">CB3491-CCS</label></td>
+                <td>
+                    <select id="sub3" id="gradesel">
+                        <option value="10.0">O</option>
+                        <option value="9.0">A+</option>
+                        <option value="8.0">A</option>
+                        <option value="7.0">B+</option>
+                        <option value="6.0">B</option>
+                        <option value="5.0">C</option>
+                        <option value="0.0">U</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: left;"><label for="sub4">CS3551-DC</label></td>
+                <td>
+                    <select id="sub4" id="gradesel">
+                        <option value="10.0">O</option>
+                        <option value="9.0">A+</option>
+                        <option value="8.0">A</option>
+                        <option value="7.0">B+</option>
+                        <option value="6.0">B</option>
+                        <option value="5.0">C</option>
+                        <option value="0.0">U</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: left;"><label for="sub5">EC:CCS375-WT</label></td>
+                <td>
+                    <select id="sub5" id="gradesel">
+                        <option value="10.0">O</option>
+                        <option value="9.0">A+</option>
+                        <option value="8.0">A</option>
+                        <option value="7.0">B+</option>
+                        <option value="6.0">B</option>
+                        <option value="5.0">C</option>
+                        <option value="0.0">U</option>
+                    </select>
+                </td>
+            </tr>
+        
+            <tr>
+                <td style="text-align: left;"><label for="sub6">EC:CCS355-NNDL</label></td>
+                <td>
+                    <select id="sub6" id="gradesel">
+                        <option value="10.0">O</option>
+                        <option value="9.0">A+</option>
+                        <option value="8.0">A</option>
+                        <option value="7.0">B+</option>
+                        <option value="6.0">B</option>
+                        <option value="5.0">C</option>
+                        <option value="0.0">U</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        
         <button type="button" onclick="gradeCal()">Submit</button>
     </form>
     <div id="resh">
-        <p>GPA accumulated in Semester 4 is: <span id="totalGPA">0.00</span></p>
+        <b><p>GPA accumulated in Semester 5 is: <span id="totalGPA">0.00</span></p></b>
     </div>
     
     <script>
@@ -91,7 +135,7 @@
 
             var cred = { sub1: 4, sub2: 4, sub3: 3, sub4: 3, sub5: 3, sub6: 3 }
 
-            for (let i = 1; i <= 9; i++) {
+            for (let i = 1; i <= 6; i++) {
                 const gradeDropdown = document.getElementById(`sub${i}`);
                 const selectedGrade = gradeDropdown.value;
                 if (selectedGrade != 0.0) {
