@@ -35,20 +35,20 @@
     </script>
 </head>
 <body align="center">
-    <h1>Cummulative Grade Point Average Calculator</h1>
+    <h1><u>Cummulative Grade Point Average Calculator</u></h1>
     <form>
-        <label for="totalsems">Calculate CGPA till: </label>
-        <select id="totalsems" required>
-            <option value="1">1st Semester</option>
-            <option value="2">2nd Semester</option>
-            <option value="3">3rd Semester</option>
-            <option value="4">4th Semester</option>
-            <option value="5">5th Semester</option>
-            <option value="6">6th Semester</option>
-            <option value="7">7th Semester</option>
-            <option value="8">8th Semester</option>
+        <label for="totalsems"><b>Calculate CGPA till: </b></label>
+        <select id="totalsems" style="border: 1px solid black;">
+            <option value="1" >1st Semester</option>
+            <option value="2" >2nd Semester</option>
+            <option value="3" >3rd Semester</option>
+            <option value="4" >4th Semester</option>
+            <option value="5" >5th Semester</option>
+            <option value="6" >6th Semester</option>
+            <option value="7" >7th Semester</option>
+            <option value="8" >8th Semester</option>
         </select><br>
-        <div id="nexbut"><button type="button" onclick="numofSems()">Next</button></div>
+        <div id="nexbut"><button type="button" onclick="numofSems()" style="margin-top: 8px; padding: 3px 8px;">Next</button></div>
         <br>
         <div id="s1" style="display: none;">
             <label>Semester 1 GPA:</label>
@@ -91,7 +91,7 @@
         </div>
         <br>
         <div id="calbut" style="display: none;"><button  type="button" onclick="calcCGPA()"> Calculate CGPA</button></div>
-        <div id="resCGPA"><p>Your CGPA is: <span id="meanResult">00.00</span></p></div>
+        <div id="resCGPA"><b><p>Your CGPA is: <span id="meanResult">00.00</span></p></b></div>
     </form>
 </body>
 </html>
